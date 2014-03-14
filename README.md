@@ -5,7 +5,6 @@
     <groupId>fr.wayis.framework</groupId>
     <artifactId>jee6-utils</artifactId>
     <version>1.0.0</version>
-    <scope>test</scope>
 </dependency>
 ```
 ##Version 1.0.0
