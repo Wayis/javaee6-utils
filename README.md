@@ -3,7 +3,7 @@
 ```
 <dependency>
     <groupId>fr.wayis.framework</groupId>
-    <artifactId>jee6-utils</artifactId>
+    <artifactId>javaee6-utils</artifactId>
     <version>1.0.0</version>
 </dependency>
 ```
