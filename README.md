@@ -3,7 +3,7 @@
 ```
 <dependency>
     <groupId>fr.wayis.framework</groupId>
-    <artifactId>mongo-utils</artifactId>
+    <artifactId>jee6-utils</artifactId>
     <version>1.0.0</version>
     <scope>test</scope>
 </dependency>
