@@ -1,4 +1,4 @@
-package fr.wayis.framework.jee6.property;
+package fr.wayis.framework.javaee.property;
 
 import javax.enterprise.util.Nonbinding;
 import javax.inject.Qualifier;
