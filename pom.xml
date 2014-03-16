@@ -7,6 +7,33 @@
     <groupId>fr.wayis.framework</groupId>
     <artifactId>javaee6-utils</artifactId>
     <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>Java EE 6 Utils</name>
+    <description>Some Java EE 6 CDI utils.</description>
+    <url>https://github.com/Wayis/javaee6-utils</url>
+
+    <scm>
+        <connection>scm:git:git@github.com:Wayis/javaee6-utils.git</connection>
+        <url>git@github.com:Wayis/javaee6-utils.git</url>
+        <developerConnection>scm:git:git@github.com:Wayis/javaee6-utils.git</developerConnection>
+    </scm>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>llabbe</id>
+            <name>Luc Labbé</name>
+            <email>luc.labbe@gmail.com</email>
+        </developer>
+    </developers>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -29,7 +56,6 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.1</version>
                 <configuration>
@@ -37,6 +63,86 @@
                     <target>1.7</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.5</version>
+                <configuration>
+                    <use>false</use>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <!--<profile>
+            <id>javaee6-utils-release</id>
+            &lt;!&ndash;
+            Signs all artifacts before deploying to Maven Central.
+            &ndash;&gt;
+            <build>
+                <plugins>
+                    <plugin>
+                        &lt;!&ndash;
+                        The goal is to sign all artifacts so that the user may verify them before downloading.
+                        The automatic build system may reuire your key ID, and passphrase specified using system properties:
+                        -Dgpg.passphrase="<passphrase>" -Dgpg.keyname="<your key ID>"
+                        In order to create the key pair, use the command "gpg &ndash;&ndash;gen-key".
+                        (&ndash;&ndash; stands for double dash)
+                        &ndash;&gt;
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.5</version>
+                        <executions>
+                            <execution>
+                                <id>gpg-sign</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>-->
+        <profile>
+            <id>generate-docs</id>
+            <!--
+            Generates the *-source.jar and *-javadoc.jar of this artifact.
+            This profile is required to be active for release
+            builds due to the packaging requirements of the Central repo.
+            -->
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <phase>prepare-package</phase>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>attach-javadoc</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
