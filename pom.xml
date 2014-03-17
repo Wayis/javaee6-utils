@@ -5,18 +5,18 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>fr.wayis.framework</groupId>
-    <artifactId>javaee6-utils</artifactId>
+    <artifactId>javaee6-extensions</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>Java EE 6 Utils</name>
-    <description>Some Java EE 6 CDI utils.</description>
-    <url>https://github.com/Wayis/javaee6-utils</url>
+    <name>Java EE 6 CDI Extensions</name>
+    <description>Some Java EE 6 CDI extensions.</description>
+    <url>https://github.com/wayis/javaee6-extensions</url>
 
     <scm>
-        <connection>scm:git:git@github.com:Wayis/javaee6-utils.git</connection>
-        <url>git@github.com:Wayis/javaee6-utils.git</url>
-        <developerConnection>scm:git:git@github.com:Wayis/javaee6-utils.git</developerConnection>
+        <connection>scm:git:git@github.com:wayis/javaee6-extensions.git</connection>
+        <url>git@github.com:wayis/javaee6-extensions.git</url>
+        <developerConnection>scm:git:git@github.com:wayis/javaee6-extensions.git</developerConnection>
     </scm>
 
     <licenses>
@@ -79,7 +79,7 @@
 
     <profiles>
         <profile>
-            <id>javaee6-utils-release</id>
+            <id>javaee6-extensions-release</id>
             <!-- Signs all artifacts before deploying to Maven Central. -->
             <build>
                 <plugins>
