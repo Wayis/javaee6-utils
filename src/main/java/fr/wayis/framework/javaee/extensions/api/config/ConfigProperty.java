@@ -1,4 +1,4 @@
-package fr.wayis.framework.javaee.property;
+package fr.wayis.framework.javaee.extensions.api.config;
 
 import javax.enterprise.util.Nonbinding;
 import javax.inject.Qualifier;
