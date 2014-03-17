@@ -78,21 +78,12 @@
     </build>
 
     <profiles>
-        <!--<profile>
+        <profile>
             <id>javaee6-utils-release</id>
-            &lt;!&ndash;
-            Signs all artifacts before deploying to Maven Central.
-            &ndash;&gt;
+            <!-- Signs all artifacts before deploying to Maven Central. -->
             <build>
                 <plugins>
                     <plugin>
-                        &lt;!&ndash;
-                        The goal is to sign all artifacts so that the user may verify them before downloading.
-                        The automatic build system may reuire your key ID, and passphrase specified using system properties:
-                        -Dgpg.passphrase="<passphrase>" -Dgpg.keyname="<your key ID>"
-                        In order to create the key pair, use the command "gpg &ndash;&ndash;gen-key".
-                        (&ndash;&ndash; stands for double dash)
-                        &ndash;&gt;
                         <artifactId>maven-gpg-plugin</artifactId>
                         <version>1.5</version>
                         <executions>
@@ -107,7 +98,7 @@
                     </plugin>
                 </plugins>
             </build>
-        </profile>-->
+        </profile>
         <profile>
             <id>generate-docs</id>
             <!--
