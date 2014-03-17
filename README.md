@@ -1,9 +1,9 @@
-# Java EE 6 Utils
+# Java EE 6 CDI Extensions
 **_Maven Dependencies_**<br/>
 ```
 <dependency>
     <groupId>fr.wayis.framework</groupId>
-    <artifactId>javaee6-utils</artifactId>
+    <artifactId>javaee6-extensions</artifactId>
     <version>1.0.0</version>
 </dependency>
 ```
