@@ -2,7 +2,7 @@
 **_Maven Dependencies_**<br/>
 ```
 <dependency>
-    <groupId>fr.wayis.framework</groupId>
+    <groupId>com.github.wayis</groupId>
     <artifactId>javaee6-extensions</artifactId>
     <version>1.0.0</version>
 </dependency>

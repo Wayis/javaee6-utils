@@ -1,6 +1,6 @@
-package fr.wayis.framework.javaee.extensions.impl.config;
+package com.github.wayis.framework.javaee.extensions.impl.config;
 
-import fr.wayis.framework.javaee.extensions.api.config.ConfigProperty;
+import com.github.wayis.framework.javaee.extensions.api.config.ConfigProperty;
 import org.apache.commons.lang3.StringUtils;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -11,7 +11,7 @@ import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
 /**
- * Producer associated to the {@link fr.wayis.framework.javaee.extensions.api.config.ConfigProperty} qualifier.<br/>
+ * Producer associated to the {@link com.github.wayis.framework.javaee.extensions.api.config.ConfigProperty} qualifier.<br/>
  * It manages:
  * <ul>
  * <li>String</li>
@@ -25,7 +25,7 @@ import java.util.ResourceBundle;
 public class ConfigPropertyProducer {
 
     /**
-     * Producer for the {@link fr.wayis.framework.javaee.extensions.api.config.ConfigProperty} qualifer for String value.
+     * Producer for the {@link com.github.wayis.framework.javaee.extensions.api.config.ConfigProperty} qualifer for String value.
      *
      * @param injectionPoint The injection point.
      * @return The String value corresponding to the key from the declared bundle.
@@ -38,7 +38,7 @@ public class ConfigPropertyProducer {
     }
 
     /**
-     * Producer for the {@link fr.wayis.framework.javaee.extensions.api.config.ConfigProperty} qualifer for Integer value.
+     * Producer for the {@link com.github.wayis.framework.javaee.extensions.api.config.ConfigProperty} qualifer for Integer value.
      *
      * @param injectionPoint The injection point.
      * @return The Integer value corresponding to the key from the declared bundle.
@@ -55,7 +55,7 @@ public class ConfigPropertyProducer {
     }
 
     /**
-     * Producer for the {@link fr.wayis.framework.javaee.extensions.api.config.ConfigProperty} qualifer for Boolean value.
+     * Producer for the {@link com.github.wayis.framework.javaee.extensions.api.config.ConfigProperty} qualifer for Boolean value.
      *
      * @param injectionPoint The injection point.
      * @return The Boolean value corresponding to the key from the declared bundle.
@@ -73,7 +73,7 @@ public class ConfigPropertyProducer {
 
     /**
      * Gets a property value.<br/>
-     * Retrieves the {@link fr.wayis.framework.javaee.extensions.api.config.ConfigProperty} annotation from the injection point.<br/>
+     * Retrieves the {@link com.github.wayis.framework.javaee.extensions.api.config.ConfigProperty} annotation from the injection point.<br/>
      * Searches the key in the declared bundle. The default bundle is a 'config.*' file.
      *
      * @param injectionPoint The injection point.
