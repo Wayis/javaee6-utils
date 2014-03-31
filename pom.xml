@@ -15,7 +15,6 @@
         <connection>scm:git:git@github.com:wayis/javaee6-extensions.git</connection>
         <url>git@github.com:wayis/javaee6-extensions.git</url>
         <developerConnection>scm:git:git@github.com:wayis/javaee6-extensions.git</developerConnection>
-      <tag>HEAD</tag>
   </scm>
 
     <licenses>
